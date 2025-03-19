@@ -1,0 +1,160 @@
+.popular {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    height: auto;
+    padding: 50px 5%;
+    text-align: center;
+  }
+  
+  /* Heading */
+  .popular h1 {
+    color: #171717;
+    font-size: 50px;
+    font-weight: 600;
+  }
+  
+  /* Underline */
+  .popular hr {
+    width: 200px;
+    height: 6px;
+    border-radius: 10px;
+    background-color: #252525;
+  }
+  
+  /* Carousel Container */
+  .popular-carousel {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  /* Product Container (for scrolling) */
+  .popular-item {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 20px 0;
+    scrollbar-width: none;
+    white-space: nowrap;
+    justify-content: center;
+  }
+  
+  .popular-item::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .popular-item .item {
+    flex: 0 0 220px; /* Ensures fixed width */
+    max-width: 220px;
+    text-align: center; /* Centers text */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .item img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  
+  .item p {
+    margin-top: 8px;
+    font-size: 18px;
+    font-weight: 500;
+    color: #333;
+    white-space: normal; /* Allows proper text wrapping */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 200px; /* Prevents text from being too wide */
+  }
+  
+  .item .price {
+    font-size: 16px;
+    color: #ff4141;
+    font-weight: bold;
+  }
+  
+  
+  /* Navigation Arrows */
+  .popular-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: 0.3s;
+    z-index: 10;
+  }
+  
+  .popular-btn:hover {
+    background: rgba(0, 0, 0, 0.8);
+  }
+  
+  .popular-prev {
+    left: 10px;
+  }
+  
+  .popular-next {
+    right: 10px;
+  }
+  
+  /* Responsive Design */
+  @media screen and (max-width: 1024px) {
+    .popular h1 {
+      font-size: 40px;
+    }
+  
+    .popular-item .item {
+      flex: 0 0 180px;
+      max-width: 180px;
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    .popular h1 {
+      font-size: 35px;
+    }
+  
+    .popular-item .item {
+      flex: 0 0 160px;
+      max-width: 160px;
+    }
+  
+    .popular-btn {
+      font-size: 18px;
+      padding: 8px 12px;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .popular h1 {
+      font-size: 30px;
+    }
+  
+    .popular hr {
+      width: 150px;
+      height: 4px;
+    }
+  
+    .popular-item .item {
+      flex: 0 0 140px;
+      max-width: 140px;
+    }
+  
+    .popular-btn {
+      font-size: 16px;
+      padding: 6px 10px;
+    }
+  }
+  
